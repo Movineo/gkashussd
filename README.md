@@ -57,9 +57,8 @@ User's Phone → TiaraConnect → USSD Service → GKash API
    
    # GKash Backend API
    GKASH_API_URL=https://gkash.onrender.com/api
-   GKASH_API_KEY=your_gkash_api_key_here
    
-   # TiaraConnect Configuration
+   # TiaraConnect Configuration (optional)
    TIARA_CONNECT_WEBHOOK_SECRET=your_webhook_secret_here
    ```
 
@@ -158,8 +157,7 @@ Main Menu (existing users)
 | `PORT` | Server port | No (default: 3000) |
 | `NODE_ENV` | Environment (development/production) | No |
 | `GKASH_API_URL` | GKash Backend API URL | Yes |
-| `GKASH_API_KEY` | GKash API authentication key | Yes |
-| `TIARA_CONNECT_WEBHOOK_SECRET` | TiaraConnect webhook secret | Yes |
+| `TIARA_CONNECT_WEBHOOK_SECRET` | TiaraConnect webhook secret | No |
 
 ## Deployment Guide
 
@@ -185,7 +183,6 @@ Main Menu (existing users)
    ```
    NODE_ENV=production
    GKASH_API_URL=https://gkash.onrender.com/api
-   GKASH_API_KEY=your_api_key_here
    TIARA_CONNECT_WEBHOOK_SECRET=your_webhook_secret_here
    ```
 
@@ -266,8 +263,7 @@ curl http://localhost:3000/health
 
 **GKash API Errors**
 - Verify `GKASH_API_URL` is correct
-- Check that `GKASH_API_KEY` is set
-- Test GKash API directly
+- Test GKash API directly: `https://gkash.onrender.com/api`
 
 **Session Issues**
 - Sessions are stored in memory (cleared on restart)
