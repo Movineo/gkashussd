@@ -32,8 +32,7 @@ export class GKashService {
       baseURL: process.env.GKASH_API_URL || 'http://localhost:4000/api',
       timeout: 30000,
       headers: {
-        'Content-Type': 'application/json',
-        'X-API-Key': process.env.GKASH_API_KEY || ''
+        'Content-Type': 'application/json'
       }
     });
 
